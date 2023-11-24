@@ -1,2 +1,2 @@
 # IkusMira
-trabajo del curso Marketing digital.
+trabajo del curso Marketing Digital.
