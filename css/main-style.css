@@ -1,15 +1,112 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(145, 145, 145)5a5;
 
 }
 
-i{
+/* EN EL HEADER */
+.cabecera {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(145, 145, 145);
+    color: darkblue;
+    height: 30vh;
+    width: 100%;
+
+}
+.logoTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(145, 145, 145);
+    color: darkblue;
+    height: 10vh;
+    width: 100%;
+    background-clip: url(../img/ikusmira.png);
+}
+
+.nav-principal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    background-color: rgb(145, 145, 145);
+    color: darkblue;
+    font-weight: 200;
+    font-size: large;
+    height: 10vh;
+    width: 100%;
+    ul{
+        display: flex;
+        li{
+            list-style: none;
+        }
+    }
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(145, 145, 145);
+    color: darkblue;
+    font-weight: 200;
+    font-size: large;
+    height: 10vh;
+    width: 100%;
+    background-color: aqua;
+
+    ul{
+        display: flex;
+       justify-content: center;
+        flex-flow: column;
+
+        li{
+            list-style: none;
+        }
+    }
+}
+/* .submenu-menu{display: none;}
+
+.submenu1_submenu-menu{display: none;} */
+i {
     cursor: pointer;
     font-size: x-large;
     color: darkblue;
     font-weight: 200;
 
+}
+
+.pie{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+.section3-pie{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+    ul{
+        display: flex;
+
+        li{
+            list-style: none;
+        }
+    }
+}
+.section4-pie{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+
+    form{
+        display: flex;
+        flex-flow: column;
+    }
 }
