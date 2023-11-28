@@ -6,37 +6,66 @@
     /* background-color: rgb(145, 145, 145); */
 }
 
+body {
+    min-height: inherit;
+
+
+}
+
+dir {
+    background-color: var(--color-background-base);
+}
+
 /* EN EL HEADER */
 .cabecera {
     display: flex;
     justify-content: center;
-    flex-flow: column;
+    flex-flow: row;
     align-items: center;
-    background-color: rgb(145, 145, 145);
+    background-color: rgb(235, 235, 235);
     color: darkblue;
-    height: 30vh;
+    height: 15vh;
     width: 100%;
+    position: relative;
 
 }
 
 .logoTitulo {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(145, 145, 145);
     color: darkblue;
     height: 10vh;
     width: 100%;
-   
+    position: static;
+
 }
+
+.buscaCesta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkblue;
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+}
+
+.nav-secundario {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
 
 .nav-principal {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  position: sticky;
-   
-    background-color: rgb(145, 145, 145);
+    position: sticky;
     color: darkblue;
     font-weight: 200;
     font-size: large;
@@ -49,18 +78,16 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(145, 145, 145);
     color: darkblue;
     font-weight: 200;
     font-size: large;
     height: 10vh;
     width: 100%;
-    background-color: aqua;
-  
+    margin: 0 auto;
 
     li {
         list-style: none;
-        display: flex;
+
         justify-content: center;
         flex-flow: column;
         width: fit-content;
@@ -69,14 +96,46 @@
 
 }
 
-/* .submenu-menu{display: none;}
+.submenu-menu {
+    display: none;
+}
 
-.submenu1_submenu-menu{display: none;} */
+.submenu2-menu {
+    display: none;
+
+}
+
+/* EN EL MAIN */
+.contenedor {
+    display: flex;
+    /* background-color: yellowgreen; */
+    height: 100vh;
+    width: 100%;
+    flex-flow: column;
+
+
+}
+
+.principal {
+    height: 100vh;
+    width: 100%;
+
+}
+
+/* EN EL FOOTER */
 .pie {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 80%;
+    background-color: rgb(145, 145, 145);
+    color: darkblue;
+    font-weight: 200;
+    font-size: large;
+    height: 10vh;
+    width: 100%;
 }
 
 .section3-pie {
