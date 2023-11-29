@@ -40,6 +40,19 @@ dir {
     width: 100%;
     position: static;
 
+    h1 {
+        font-size: 75px;
+        font-weight: 700;
+        color: darkblue;
+        opacity: 0.3;
+
+
+        a {
+            text-decoration: none;
+            border-radius: 10px;
+        }
+    }
+
 }
 
 .buscaCesta {
@@ -130,7 +143,6 @@ dir {
     align-items: center;
     position: relative;
     top: 80%;
-    background-color: rgb(145, 145, 145);
     color: darkblue;
     font-weight: 200;
     font-size: large;
@@ -160,9 +172,27 @@ dir {
     form {
         display: flex;
         flex-flow: column;
+        
+       
     }
 }
+#email{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    width: max-content;
+    height: fit-content;
+}
 
+#toma{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    width: fit-content;
+    height: fit-content;
+}
 i {
     cursor: pointer;
     font-size: x-large;

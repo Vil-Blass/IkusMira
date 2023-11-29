@@ -102,23 +102,24 @@ let sigte = 0;
 //   contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
 //   sigte++;
 // }
-window.addEventListener('scroll', () => {
-  const scrollHeight = window.innerHeight + window.scrollY;
-  const totalHeight = document.documentElement.scrollHeight;
+// window.addEventListener('scroll', () => {
+//   const scrollHeight = window.innerHeight + window.scrollY;
+//   const totalHeight = document.documentElement.scrollHeight;
 
-  if (scrollHeight >= totalHeight) {
-    contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
-    sigte++;
+//   if (scrollHeight >= totalHeight) {
+//     contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
+//     contenedor.style.animation = 'none';
+//     sigte++;
 
-    if (sigte === imagenesZara.length) {
-      sigte = 0;
-    }
-  }
-});
+//     if (sigte === imagenesZara.length) {
+//       sigte = 0;
+//     }
+//   }
+// });
 
 window.addEventListener('wheel', function(event) {
   const delta = event.deltaY;
-  
+
 
   if (delta > 0) {
     // Scrolling hacia abajo
@@ -130,3 +131,18 @@ window.addEventListener('wheel', function(event) {
     }
   }
 });
+
+
+let registro = document.querySelector('#email');
+let tomo = document.querySelector('#toma');
+let arrayEmail = [];
+
+tomo.addEventListener('click', () => {
+  arrayEmail.push(registro.value);
+  console.log(arrayEmail);
+})
+
+//guardar el email en el local storage
+localStorage.setItem('email', JSON.stringify(arrayEmail));
+
+
