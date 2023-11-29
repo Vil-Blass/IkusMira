@@ -7,7 +7,6 @@ let mostrar = document.querySelector('.submenu-menu');
 let submenu2 = document.querySelector('.submenu2-menu');
 function mostrarSubMenu() {
 
-
   mostrar.style.display = 'block';
   mostrar.style.backgroundColor = 'red';
   mostrar.style.cursor = 'pointer';
@@ -16,30 +15,37 @@ function mostrarSubMenu() {
   mostrar.style.top = '50px';
   mostrar.style.width = 'fit-content';
 
+
+
+
+}
+
+function mostrarSubMenu2() {
+
   submenu2.style.display = 'block';
   submenu2.style.backgroundColor = 'red';
   submenu2.style.cursor = 'pointer';
   submenu2.style.position = 'absolute';
   submenu2.style.zIndex = '1';
-  submenu2.style.top = '70px';
+  submenu2.style.top = '50px';
   submenu2.style.width = 'fit-content';
-  submenu2.style.right='100px';
+
   
 
-
-
 }
-
+function ocultarSubMenu2() {
+  setTimeout(() => {
+    submenu2.style.display = 'none';
+  },5000)
+}
 function ocultarSubMenu() {
   setTimeout(() => {
     mostrar.style.display = 'none';
-     submenu2.style.display = 'none';
+     
 
   }, 5000)
 
 }
-
-
 
 
 console.log('YO' + mostrar.innerHTML);
@@ -54,15 +60,16 @@ btn.addEventListener('click', () => {
 
 })
 btn1.addEventListener('mouseout', () => {
-  ocultarSubMenu();
+  ocultarSubMenu2();
 })
 btn1.addEventListener('click', () => {
-  mostrarSubMenu();
+  mostrarSubMenu2();
 })
 console.log('ESTOY');
 
 
 let imagenesZara = [
+  './media/img/zara0.jpg',
 '  ./media/img/zara1.jpg',
 '  ./media/img/zara2.jpg',
 '  ./media/img/zara3.jpg',
@@ -74,56 +81,21 @@ let imagenesZara = [
 
 
 const contenedor = document.querySelector('.principal');
-
+contenedor.style.backgroundImage = `url(${imagenesZara[0]})`;
+contenedor.style.backgroundRepeat = 'no-repeat';
 let sigte = 0;
 
-//crear un carrusel
 
-// function carrusel() {
-//   //recorrer array de imagenes
-//   setInterval(() => {
-//      for (let i = 0; i < imagenesZara.length; i++) {
-//     contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
-//     sigte++;
-
-
-//     if (sigte === imagenesZara.length) {
-//       sigte = 0;
-//     }
-//   }
-  
-//   }, 3000)
-// }
-// carrusel();
-
- 
-// //al hacer scroll se cambia la imagen desde abajo
-// window.addEventListener('scroll', carrusel); () => {
-//   contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
-//   sigte++;
-// }
-// window.addEventListener('scroll', () => {
-//   const scrollHeight = window.innerHeight + window.scrollY;
-//   const totalHeight = document.documentElement.scrollHeight;
-
-//   if (scrollHeight >= totalHeight) {
-//     contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
-//     contenedor.style.animation = 'none';
-//     sigte++;
-
-//     if (sigte === imagenesZara.length) {
-//       sigte = 0;
-//     }
-//   }
-// });
 
 window.addEventListener('wheel', function(event) {
   const delta = event.deltaY;
+ 
+ 
 
-
-  if (delta > 0) {
+  if (delta > 0 ) {
     // Scrolling hacia abajo
     contenedor.style.backgroundImage = `url(${imagenesZara[sigte]})`;
+    contenedor.style.transitionTransform = 'all 3s ease';
     sigte++;
 
     if (sigte === imagenesZara.length) {
@@ -144,5 +116,11 @@ tomo.addEventListener('click', () => {
 
 //guardar el email en el local storage
 localStorage.setItem('email', JSON.stringify(arrayEmail));
+
+let btnMenu = document.querySelector('.bottonMenu-cajaboton');
+
+btnMenu.addEventListener('click', () => {
+  mostrarSubMenu();
+})
 
 

@@ -14,6 +14,7 @@ body {
 
 dir {
     background-color: var(--color-background-base);
+    cursor: pointer;
 }
 
 /* EN EL HEADER */
@@ -22,12 +23,44 @@ dir {
     justify-content: center;
     flex-flow: row;
     align-items: center;
-    background-color: rgb(235, 235, 235);
     color: darkblue;
     height: 15vh;
     width: 100%;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
 
+}
+
+.cajaboton {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+    align-items: center;
+}
+
+.bottonMenu-cajaboton {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-style: initial;
+    line-height: inherit;
+    appearance: none;
+    border: none;
+
+
+    align-items: inherit;
+    width: fit-content;
+    height: fit-content;
+
+    background-color: transparent;
+
+    i {
+        background-color: transparent;
+        font-size: 2em;
+
+    }
 }
 
 .logoTitulo {
@@ -36,42 +69,30 @@ dir {
     justify-content: center;
     align-items: center;
     color: darkblue;
-    height: 10vh;
-    width: 100%;
-    position: static;
-
-    h1 {
-        font-size: 75px;
-        font-weight: 700;
-        color: darkblue;
-        opacity: 0.3;
-
-
-        a {
-            text-decoration: none;
-            border-radius: 10px;
-        }
-    }
-
-}
-
-.buscaCesta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: darkblue;
-    height: 10vh;
-    width: 100%;
-    position: sticky;
+    height: 100%;
+    width: 35%;
     z-index: 100;
-}
-
-.nav-secundario {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 
 }
+
+.titulo {
+    font-size: 100px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 8%, 0, 0, 0;
+
+
+    a {
+        color: darkblue;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+}
+
+
+
 
 
 .nav-principal {
@@ -80,10 +101,8 @@ dir {
     align-items: center;
     position: sticky;
     color: darkblue;
-    font-weight: 200;
-    font-size: large;
-    height: 10vh;
     width: 100%;
+
 
 }
 
@@ -91,12 +110,8 @@ dir {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: darkblue;
-    font-weight: 200;
-    font-size: large;
-    height: 10vh;
     width: 100%;
-    margin: 0 auto;
+
 
     li {
         list-style: none;
@@ -105,33 +120,99 @@ dir {
         flex-flow: column;
         width: fit-content;
 
+        button {
+            background-color: transparent;
+            appearance: none;
+            border: none;
+
+        }
     }
 
 }
 
 .submenu-menu {
     display: none;
+
+
 }
 
 .submenu2-menu {
+
     display: none;
+}
+
+.buscaCesta {
+    display: flex;
+    justify-content: center;
+    color: darkblue;
+    width: 60%;
+    height: 100%;
+    position: sticky;
+    z-index: 100;
+}
+
+.busca-buscaCesta {
+    height: 100%;
+    width: 45%;
+    align-items: center;
+    display: flex;
+
+    input {
+        width: 100%;
+        height: 20%;
+    }
+}
+
+.nav-secundario {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
 
 }
+
+.soporte {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-flow: row;
+    margin: 10%;
+
+  
+    li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+
+            button {
+                background-color: transparent;
+                appearance: none;
+                border: none;
+            }
+        }
+    }
+
+}
+
 
 /* EN EL MAIN */
 .contenedor {
     display: flex;
     /* background-color: yellowgreen; */
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     flex-flow: column;
+    position: relative;
 
 
 }
 
 .principal {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    position: absolute;
+
 
 }
 
@@ -172,11 +253,12 @@ dir {
     form {
         display: flex;
         flex-flow: column;
-        
-       
+
+
     }
 }
-#email{
+
+#email {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -185,7 +267,7 @@ dir {
     height: fit-content;
 }
 
-#toma{
+#toma {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -193,6 +275,7 @@ dir {
     width: fit-content;
     height: fit-content;
 }
+
 i {
     cursor: pointer;
     font-size: x-large;
