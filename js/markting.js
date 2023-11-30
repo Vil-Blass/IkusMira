@@ -83,6 +83,7 @@ let imagenesZara = [
 const contenedor = document.querySelector('.principal');
 contenedor.style.backgroundImage = `url(${imagenesZara[0]})`;
 contenedor.style.backgroundRepeat = 'no-repeat';
+contenedor.style.backgroundSize = 'cover';
 let sigte = 0;
 
 
