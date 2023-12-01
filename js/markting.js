@@ -14,7 +14,7 @@ function mostrarSubMenu() {
   mostrar.style.zIndex = '1';
   mostrar.style.top = '50px';
   mostrar.style.width = 'fit-content';
-
+  submenu2.style.display = 'none';
 
 
 
@@ -29,18 +29,20 @@ function mostrarSubMenu2() {
   submenu2.style.zIndex = '1';
   submenu2.style.top = '50px';
   submenu2.style.width = 'fit-content';
-
+mostrar.style.display = 'none';
   
 
 }
 function ocultarSubMenu2() {
   setTimeout(() => {
     submenu2.style.display = 'none';
+    
   },5000)
 }
 function ocultarSubMenu() {
   setTimeout(() => {
     mostrar.style.display = 'none';
+    
      
 
   }, 5000)
@@ -48,22 +50,24 @@ function ocultarSubMenu() {
 }
 
 
-console.log('YO' + mostrar.innerHTML);
+console.log('YO');
 const btn = document.querySelector('.botton');
 const btn1 = document.querySelector('.botton1');
 
 btn.addEventListener('mouseout', () => {
   ocultarSubMenu();
+
 })
 btn.addEventListener('click', () => {
   mostrarSubMenu();
-
+  mostrarServicios()
 })
 btn1.addEventListener('mouseout', () => {
   ocultarSubMenu2();
 })
 btn1.addEventListener('click', () => {
   mostrarSubMenu2();
+  mostrarConocenos()
 })
 console.log('ESTOY');
 
@@ -125,3 +129,14 @@ btnMenu.addEventListener('click', () => {
 })
 
 
+let servicios = document.querySelector('.servicios-principal');
+let conocenos = document.querySelector('.conocenos-principal');
+
+function mostrarServicios() {
+  servicios.style.display = 'block';
+  conocenos.style.display = 'none';
+}
+function mostrarConocenos() {
+  conocenos.style.display = 'block';
+  servicios.style.display = 'none';
+}

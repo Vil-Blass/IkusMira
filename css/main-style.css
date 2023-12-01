@@ -209,21 +209,45 @@ dir {
 }
 
 .principal {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
     height: 100%;
     width: 100%;
     position: absolute;
 
 
 }
+.servicios-principal {
+
+  display: none;
+  position: relative;
+  top: 5%;
+  left: 10%;
+  width: 25%;
+  background-color: aquamarine;
+}
+
+.conocenos-principal {
+  display: none;
+  position: relative;
+  top: 5%;
+  left: 10%;
+  background-color: aquamarine;
+  width: 25%;
+
+}
+
 
 /* EN EL FOOTER */
 .pie {
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 80%;
+    top: 70%;
     color: darkblue;
     font-weight: 200;
     font-size: large;
